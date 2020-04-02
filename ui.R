@@ -1,5 +1,5 @@
 pageWithSidebar(
-  headerPanel('Application de V. Couallier - Les Iris de Fisher'),
+  headerPanel('Application de V. Couallier - Les Iris de Fisher - Master MSS'),
   sidebarPanel(
     selectInput('xcol', 'X Variable', names(iris),
                 selected=names(iris)[[1]]),
