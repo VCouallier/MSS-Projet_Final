@@ -10,12 +10,11 @@ pageWithSidebar(
   ),
   mainPanel(
     h3("Bienvenue sur l'application des Iris de Fisher, créée dans le cadre du master MAS parcours MSS.")
-    ,hr()
-    ,h4("Voici un aperçu des données")
-    ,tableOutput('table1')
-    ,hr()
-    ,h4("Et le graphique de la classification par kmeans")
+    ,h4("Voici le graphique de la classification par kmeans")
     ,plotOutput("plot1")
+    ,hr()
+    ,h4("et un aperçu des données")
+    ,tableOutput('table1')
     ,hr()
     ,h4("La table des deux colonnes sélectionnées")
     ,DT::dataTableOutput('data')
