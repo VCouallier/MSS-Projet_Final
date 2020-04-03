@@ -128,9 +128,9 @@ knitr::kable(table(clusters$cluster,iris$Species))
 
 | setosa | versicolor | virginica |
 | -----: | ---------: | --------: |
-|      0 |         46 |        50 |
-|     33 |          0 |         0 |
-|     17 |          4 |         0 |
+|      0 |         48 |        14 |
+|      0 |          2 |        36 |
+|     50 |          0 |         0 |
 
 Pour finir, après le tricotage et la création du html final, on peut
 voir dans le dossier un fichier créé avec l’extension `.md`. On change
