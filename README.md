@@ -5,7 +5,7 @@ la date
 
 Les Iris de Fisher est un fameux jeu de données, propice à la
 classification. Notre objectif est de montrer les rudiments d’un
-document ‘RMarkdown’ tricoté avec RStudio, pour en faire un document
+document 'RMarkdown' tricoté avec RStudio, pour en faire un document
 ‘Markdown’ visible sur GitHub. Si on renomme le fichier en READM.md à
 la racine du dépôt, il s’affiche directement sous la liste des fichiers
 du dépôt. Bien sûr le tricotage créera aussi un document html qu’on peut
