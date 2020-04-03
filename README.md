@@ -5,11 +5,12 @@ la date
 
 Les Iris de Fisher est un fameux jeu de données, propice à la
 classification. Notre objectif est de montrer les rudiments d’un
-document 'RMarkdown' tricoté avec RStudio, pour en faire un document
-‘Markdown’ visible sur GitHub. Si on renomme le fichier en READM.md à
-la racine du dépôt, il s’affiche directement sous la liste des fichiers
-du dépôt. Bien sûr le tricotage créera aussi un document html qu’on peut
-aussi déposer sur GitHub, mais qui ne se visualise pas aussi facilement.
+document `RMarkdown` tricoté avec RStudio, pour en faire un document
+`Markdown` visible sur GitHub. Si on renomme le fichier en **README.md**
+à la racine du dépôt, il s’affiche directement sous la liste des
+fichiers du dépôt. Bien sûr le tricotage pourrait créer un document html
+avec l’option `html_document` qu’on peut déposer sur GitHub, mais qui ne
+se visualise pas aussi facilement.
 
 Pour commencer, on définit les options générales de knitr, à choisir…
 
@@ -27,14 +28,16 @@ library(ggplot2)
 
 # Récupération des données
 
-Le jeu de données iris est déjà dans RStudio pour pouvoir y accéder :
+Le jeu de données **iris** est déjà dans RStudio pour pouvoir y accéder
+:
 
 ``` r
 data(iris)
 ```
 
 On peut alors le manipuler, par exemple, le visualiser. En prévision
-d’une conversion en Markdown (et pas seulement html), on utilise kable
+d’une conversion en `Markdown` (et pas seulement html), on utilise
+`kable`
 
 ``` r
 knitr::kable(head(iris))
@@ -58,7 +61,7 @@ texte. La cheat sheet de RMarkdown est visible ici sur cette page
 Et un résumé sympa de la syntaxe Markdown ici
 :<https://guides.github.com/features/mastering-markdown/>
 
-Ce qu’il faut savoir : RMakdwon et Markdown, c’est différent \! Bon,
+Ce qu’il faut savoir : `RMakdown` et `Markdown`, c’est différent \! Bon,
 pour revenir à notre analyse, voici les graphes représentés
 
 1.  le nuage de points selon les longueurs et largeurs de sépales
@@ -88,10 +91,9 @@ ggplot(data=iris, aes(x=Species, y=Petal.Length,col=Species)) + geom_boxplot()
 
 # Classification par kmeans
 
-L’application shiny visible à
-:<https://couallier.shinyapps.io/Les_Iris_de_Fisher/>
-
-reprend ce graphe :
+Cet exemple virtuel se propose de classifier les iris selon des
+variables numériques sélectionnées dans le jeu de données. Par exemple
+avec les deux premières :
 
 ``` r
 selectedData <- iris[, c(1,2)]
@@ -126,10 +128,15 @@ knitr::kable(table(clusters$cluster,iris$Species))
 
 | setosa | versicolor | virginica |
 | -----: | ---------: | --------: |
-|     50 |          0 |         0 |
 |      0 |         48 |        14 |
 |      0 |          2 |        36 |
+|     50 |          0 |         0 |
 
 Pour finir, après le tricotage et la création du html final, on peut
-voir dans le dossier un fichier créé avec l’extension ‘.md’. On change
-som nom en ‘README.md’, et on pousse sur GitHub.
+voir dans le dossier un fichier créé avec l’extension `.md`. On change
+som nom en `README.md`, et on pousse sur GitHub.
+
+# Application Shiny
+
+On retrouve l’application shiny correspondante à ce rapport à l’adresse
+:<https://couallier.shinyapps.io/MSS-Projet_Final-les-Iris/>
